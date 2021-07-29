@@ -3,7 +3,7 @@
   // Define a function we want to run once for each feature in the features array
   // Give each feature a popup describing the place and time of the earthquake
   function popUpMsg(feature, layer) {
-    layer.bindPopup("<h3>" + feature.properties.mag + " :  Magnitude |   " + feature.properties.place +
+    layer.bindPopup("<h3>" + feature.properties.mag + " :  Magnitude |   " + feature.geometry.coordinates[2] + " :  Depth |   "  + feature.properties.place +
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p>");
   };
 
